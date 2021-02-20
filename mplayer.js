@@ -7,8 +7,9 @@ var dtoca = window.document.getElementById("distoc");
 var dvol = window.document.getElementById("disvol");
 var dfx = window.document.getElementById("disfai");
 
+
 function on() {
-    if (ligado == true) {
+    if (ligado)  {
         tocando = false;
         volume = 0;
         ligado = false;
@@ -25,21 +26,21 @@ function on() {
     }
 }
 function Play() {
-    if (ligado == true) {
+    if (ligado) {
         tocando = true;
         dtoca.innerText = "Tocando"
     }
 }
 
 function Pause() {
-    if (ligado == true) {
+    if (ligado) {
         tocando = false;
         dtoca.innerText = "Pausado"
     }
 }
 
 function Parar() {
-    if (ligado == true) {
+    if (ligado) {
         tocando = false;
         faixa = 1;
         dfx.innerHTML = 1;
@@ -48,28 +49,28 @@ function Parar() {
 }
 
 function Mais() {
-    if (ligado == true && tocando == true && volume <20) {
+    if (ligado && volume <20) {
         volume = volume + 2;
         dvol.innerHTML = volume;
     }
 }
 
 function Menos() {
-    if (ligado == true && tocando == true && volume > 0) {
+    if (ligado && volume > 0) {
         volume = volume - 2;
         dvol.innerHTML = volume;
     }
 }
 
 function Prox() {
-    if (ligado == true && faixa < 10 && tocando == true) {
+    if (ligado && faixa < 10 ) {
         faixa = faixa + 1;
         dfx.innerHTML = faixa;
     }
 }
 
 function Ant() {
-    if (ligado == true && faixa > 0 && tocando == true) {
+    if (ligado  && faixa > 0 ) {
         faixa = faixa - 1;
         dfx.innerHTML = faixa;
     }
