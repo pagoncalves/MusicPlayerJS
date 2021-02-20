@@ -42,6 +42,7 @@ function Parar() {
     if (ligado == true) {
         tocando = false;
         faixa = 1;
+        dfx.innerHTML = 1;
         dtoca.innerText = "Parado";
     }
 }
