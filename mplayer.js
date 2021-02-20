@@ -14,6 +14,9 @@ function on() {
         ligado = false;
         btlig.style.backgroundColor = 'red';
         btlig.innerText = "Desligado";
+        dtoca.innerHTML = " ";
+        dvol.innerHTML = " ";
+        dfx.innerHTML = " ";
     } else {
         btlig.style.backgroundColor = 'green';
         btlig.innerText = "Ligado";
@@ -51,21 +54,21 @@ function Mais() {
 }
 
 function Menos() {
-    if (ligado == true && tocando && volume > 0) {
+    if (ligado == true && tocando == true && volume > 0) {
         volume = volume - 2;
         dvol.innerHTML = volume;
     }
 }
 
 function Prox() {
-    if (ligado == true && faixa < 10) {
+    if (ligado == true && faixa < 10 && tocando == true) {
         faixa = faixa + 1;
         dfx.innerHTML = faixa;
     }
 }
 
 function Ant() {
-    if (ligado == true && faixa > 0) {
+    if (ligado == true && faixa > 0 && tocando == true) {
         faixa = faixa - 1;
         dfx.innerHTML = faixa;
     }
