@@ -8,6 +8,7 @@ function on() {
         tocando = false;
         volume = 0;
         ligado = false;
+        faixa = 1;
         $("#ligar").css("backgroundColor",'red');
         $("#ligar").html("Desligado");
         $("#dtoc").html("");
@@ -23,14 +24,15 @@ function on() {
 function Play() {
     if (ligado) {
         tocando = true;
-        $("#dtoc").html("Tocando");
+        $("#dfx").html(` ${faixa}`)
+        $("#dtoc").html(" Tocando");
     }
 }
 
 function Pause() {
     if (ligado) {
         tocando = false;
-        $("#dtoc").html("Pausado");
+        $("#dtoc").html(" Pausado");
     }
 }
 
@@ -39,34 +41,34 @@ function Parar() {
         tocando = false;
         faixa = 1;
         $("#dfx").html(1);
-        $("#dtoc").html("Parado");
+        $("#dtoc").html(" Parado");
     }
 }
 
 function Mais() {
     if (ligado && volume <20) {
         volume = volume + 2;
-        $("#dvol").html(volume);
+        $("#dvol").html(` ${volume}`);
     }
 }
 
 function Menos() {
     if (ligado && volume > 0) {
         volume = volume - 2;
-        $("#dvol").html(volume);
+        $("#dvol").html(` ${volume}`);
     }
 }
 
 function Prox() {
     if (ligado && faixa < 10 ) {
         faixa = faixa + 1;
-        $("#dfx").html(faixa);
+        $("#dfx").html(` ${faixa}`);
     }
 }
 
 function Ant() {
     if (ligado  && faixa > 0 ) {
         faixa = faixa - 1;
-        $("#dfx").html(faixa);
+        $("#dfx").html(` ${faixa}`);
     }
 }

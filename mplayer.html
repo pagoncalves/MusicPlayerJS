@@ -6,31 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <link rel="stylesheet" href="mplayer.css">
 </head>
 
 <body>
-    <div> 
-    Display:<div id="dtoc"> </div>
-    Faixa:<div id="dfx"> </div>
-    Volume:<div id="dvol"> </div>
+    <div class="display"> 
+        Display:<div id="dtoc"> </div> <br>
+    Faixa:<div id="dfx"> </div> <br>
+    Volume:<div id="dvol"> </div> <br>
 </div>
-    <div>
+    <div class="dbot">
         <button onclick="on()" id="ligar">Liga/Desliga</button>
 
-    </div>
-
-    <div>
         <button onclick="Play()"> > </button>
         <button onclick="Pause()">||</button>
-        <button onclick="Parar()">O</button>
-    </div>
-    <div>
-        <button onclick="Prox()">Proxima</button>
-        <button onclick="Ant()">Anterior</button>
-    </div>
-    <div>
-        <button onclick="Mais()"> + Volume</button>
-        <button onclick="Menos()"> - Volume</button>
+        <button onclick="Parar()">O</button><br>
+    
+        <button onclick="Ant()"> < </button>
+        <button onclick="Prox()"> > </button>
+        
+    
+        <button onclick="Mais()"> + </button>
+        <button onclick="Menos()"> - </button><br>
     </div>
 <script src="jquery-3.5.1.min.js"></script>
 <script src="mplayer.js"></script>
